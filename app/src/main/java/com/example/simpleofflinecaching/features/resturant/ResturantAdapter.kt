@@ -16,12 +16,12 @@ class ResturantAdapter : ListAdapter<Resturant,ResturantAdapter.ResturantViewHol
                 fun bind(resturant: Resturant){
                     binding.apply {
                         Glide.with(itemView)
-                            .load(resturant.logo)
+                            .load(resturant.avatar)
                             .into(imageViewLogo)
 
-                        textViewName.text = resturant.name
-                        textViewType.text = resturant.type
-                        textViewType.text = resturant.address
+                        textViewName.text = resturant.username
+                        textViewType.text = resturant.gender
+                        textViewType.text = resturant.email
                     }
                 }
             }
@@ -40,7 +40,7 @@ class ResturantAdapter : ListAdapter<Resturant,ResturantAdapter.ResturantViewHol
 
     class ResturantComparator : DiffUtil.ItemCallback<Resturant>(){
         override fun areItemsTheSame(oldItem: Resturant, newItem: Resturant) =
-            oldItem.name == newItem.name
+            oldItem.username == newItem.username
 
         override fun areContentsTheSame(oldItem: Resturant, newItem: Resturant) =
             oldItem == newItem

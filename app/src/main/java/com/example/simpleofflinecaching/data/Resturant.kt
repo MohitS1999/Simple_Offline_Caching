@@ -1,8 +1,8 @@
 package com.example.simpleofflinecaching.data
 
 data class Resturant(
-    val name: String,
-    val type: String,
-    val logo: String,
-    val address: String
+    val username: String,
+    val gender: String,
+    val avatar: String,
+    val email: String
 )
