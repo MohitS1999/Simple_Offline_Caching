@@ -5,6 +5,8 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "restaurants")
 data class Resturant(
+
+    //primary key
     @PrimaryKey val username: String,
     val gender: String,
     val avatar: String,
